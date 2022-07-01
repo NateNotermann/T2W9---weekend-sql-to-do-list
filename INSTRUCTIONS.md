@@ -63,3 +63,17 @@ For each of your strech goals, you will be practicing git branching. Please refe
 - `feature-time-completed` 
 
     - [ ]  Add the ability to record when a task was completed. Show the completed date on the frontend in a pretty format.
+
+<!-- readMe.md -->
+<!-- .gitignore -->
+<!-- server folder-->
+<!-- public folder -->
+<!-- script folder -->
+<!-- style folder -->
+<!-- vendors -->
+<!-- index.html-->
+<!-- server.js -->
+<!-- client.js -->
+<!-- -->
+<!-- -->
+<!-- -->
