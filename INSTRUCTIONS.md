@@ -64,16 +64,17 @@ For each of your strech goals, you will be practicing git branching. Please refe
 
     - [ ]  Add the ability to record when a task was completed. Show the completed date on the frontend in a pretty format.
 
-<!-- readMe.md -->
-<!-- .gitignore -->
-<!-- server folder-->
-<!-- public folder -->
-<!-- script folder -->
-<!-- style folder -->
-<!-- vendors -->
-<!-- index.html-->
-<!-- server.js -->
-<!-- client.js -->
+<!-- readMe.md DONE -->
+<!-- .gitignore DONE -->
+<!-- server folder DONE -->
+<!-- public folder DONE -->
+<!-- script folder DONE -->
+<!-- style folder DONE -->
+<!-- vendors DONE -->
+<!-- index.html DONE -->
+<!-- server.js DONE -->
+<!-- client.js DONE -->
+
 <!-- -->
 <!-- -->
 <!-- -->
