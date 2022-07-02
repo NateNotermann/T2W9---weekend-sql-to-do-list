@@ -14,7 +14,7 @@ You are going to create a 'TO DO' application. This type of application is very 
 **Here are the specific components for the challenge:**
 
 * Create a front end experience that allows a user to create a Task.
-<!-- need 2 input fields and 1 button - html -->
+<!-- need 2 input fields and 1 button - html - DONE--> 
 * When the Task is created, it should be stored inside of a database (SQL)
 <!-- --> 
 * Whenever a Task is created the front end should refresh to show all tasks that need to be completed.

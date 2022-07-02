@@ -4,11 +4,16 @@ console.log('js');
 function onReady(){
 //click listeners here
 getTasks();  //  NOT set up yet
-$(document).('click, ')
+$(document).on('click', '#addButton', addTask) // connects
+$(document).on('click', '#clearAllTasksButton', addTask) // connects
+
 
 
 }
-// set up click listeners
+// -- MAIN on page start click listeners -- DONE -- //
+
+// task button listener mark completed //
+// task button to delete task // 
 
 // need a getTasks() function
 // need a renderTask() function
@@ -20,7 +25,10 @@ $(document).('click, ')
 
 
 
+function addTask(){
+    console.log( 'function to addTask' );
 
+}
 
 
 // -- BACK-END OR SERVER/ROUT/POOL FUNCTIONS -- //
@@ -28,7 +36,9 @@ function getTasks(){
     console.log( 'function to get current tasks in db');
 } 
 
-
+function clearAllTasks(){
+    console.log( 'function to clear all task' );
+}
 
 // --- FRONT END OR DOM FUNCTIONS --- //
 function renderTask(){
