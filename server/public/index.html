@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,26 +9,47 @@
     <script src="scripts/client.js"></script>
     <link rel="stylesheet" href="styles/style.css">
     <title>Week 9 Weekend Challenge</title>
-    <h1>Weekend SQL To Do List</h1>
-    <br>
-    <h2>To-Do List</h2>
 </head>
 
 <body>
-    <table>
-        <th>
-            <td>Task</td>
-            <td>Description</td>
-            <td>Status</td>
-            <td>Delete</td>
-        </th>
-        <tr>
-            <td>Example Task</td>
-            <td>Example Description</td>
-            <td>Example Status</td>
-            <td>Example Delete</td>
-        </tr>
-    </table>
+    <header>
+        <!-- APP TITLE -->
+        <h1>Weekend SQL To Do List</h1>
+    </header>
+
+    <br>
+
+    <!-- ADD TASK & DESCRIPTION INPUTS & BUTTON SECTION-->
+    <section id="addTask">
+        <h2>Add Task</h2>
+        <input data-id="input-task" placeholder="Task">
+        <input data-id="task-description" placeholder="Description">
+        <button data-id="add-button">Add Task</button>
+    </section>
+
+    <!-- LIST OF ALL TASKS SECTION-->
+    <section id="allTasks">
+        <h2>To-Do List</h2>
+        <table>
+            <!--  TABLE HEADERS -->
+            <th>Task</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Delete</th>
+            <tr>
+                <td>Example Task</td>
+                <td>Example Description</td>
+                <td>Example STATUS</td>
+                <td>Example Delete BUTTON</td>
+            </tr>
+            <tr>
+                <td>Example Task</td>
+                <td>Example Description</td>
+                <td>Example STATUS</td>
+                <td>Example Delete BUTTON</td>
+            </tr>
+        </table>
+    </section>
 </body>
 
 </html>
