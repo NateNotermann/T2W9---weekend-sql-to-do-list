@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(238, 250, 255);
+    background-color: rgb(225, 240, 247);
 }
 
 h1 {
@@ -18,7 +18,29 @@ table, th, td {
 }
 
 
-tr:nth-child(odd){
+/* tr:nth-child(odd){
     background-color: lightcyan;
+} */
+
+table {
+    width: 100%;
 }
 
+th {
+    width: 25%;
+}
+
+td {
+    text-align: center;
+}
+
+
+.false {
+    font-style: italic;
+    background-color: lightcoral;
+
+}
+
+.true {
+    background-color: lightgreen;
+}
