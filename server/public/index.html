@@ -24,7 +24,7 @@
         <h2>Add Task</h2>
         <input data-id="inputTask" placeholder="Task">
         <input data-id="taskDescription" placeholder="Description">
-        <button data-id="addButton" id="addButton" >Add Task</button>
+        <button data-id="addButton" id="addButton">Add Task</button>
     </section>
 
     <!-- LIST OF ALL TASKS SECTION-->
@@ -32,26 +32,31 @@
         <h2>To-Do List</h2>
         <table>
             <!--  TABLE HEADERS -->
-            <th>Task</th>
-            <th>Description</th>
-            <th>Status</th>
-            <th>Delete</th>
-            <tr>
-                <td>Example Task</td>
-                <td>Example Description</td>
-                <td>Example STATUS</td>
-                <td>Example Delete BUTTON</td>
-            </tr>
-            <tr>
-                <td>Example Task</td>
-                <td>Example Description</td>
-                <td>Example STATUS</td>
-                <td>Example Delete BUTTON</td>
-            </tr>
+            <thead>
+                <th>Task</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tbody">
+                <tr>
+                    <td>Example Task</td>
+                    <td>Example Description</td>
+                    <td>Example STATUS</td>
+                    <td>Example Delete BUTTON</td>
+                </tr>
+
+                <tr>
+                    <td>Example Task</td>
+                    <td>Example Description</td>
+                    <td>Example STATUS</td>
+                    <td>Example Delete BUTTON</td>
+                </tr>
+            </tbody>
         </table>
-        
+
         <p>
-        <button data-id="clearAllTasksButton" id="clearAllTasksButton">Clear All Tasks Button</button>
+            <button data-id="clearAllTasksButton" id="clearAllTasksButton">Clear All Tasks Button</button>
         </p>
     </section>
 </body>

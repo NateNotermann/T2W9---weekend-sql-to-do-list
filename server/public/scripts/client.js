@@ -5,7 +5,7 @@ function onReady(){
 //click listeners here
 getTasks();  //  NOT set up yet
 $(document).on('click', '#addButton', addTask) // connects
-$(document).on('click', '#clearAllTasksButton', addTask) // connects
+$(document).on('click', '#clearAllTasksButton', clearAllTasks) // connects
 };
 
 
@@ -55,6 +55,21 @@ function clearAllTasks(){
 }
 
 // --- FRONT END OR DOM FUNCTIONS --- //
-function renderTask(){
-    console.log( 'function to renderTask tasks in db');
+function renderTask(tasks){
+    
+$('#tbody').empty();
+console.log('START renderTask', tasks);
+for ( let task of tasks ) {
+    console.log(task);
+    $('#tbody').append(`
+    <tr>
+    <td>${task.name}</td>
+    <td>${task.description}</td>
+    <td>${task.status}</td>
+    <td><button data-id="${task.id}">Delete</button></td>
+    </tr>
+    `);
+}
+$('input').val('');
+    console.log( 'START renderTask');
 }
