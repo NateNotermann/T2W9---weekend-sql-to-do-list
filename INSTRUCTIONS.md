@@ -16,29 +16,35 @@ You are going to create a 'TO DO' application. This type of application is very 
 * Create a front end experience that allows a user to create a Task.
 <!-- need 2 input fields and 1 button - html - DONE--> 
 * When the Task is created, it should be stored inside of a database (SQL)
-<!-- --> 
+<!-- sends to db -- DONE--> 
 * Whenever a Task is created the front end should refresh to show all tasks that need to be completed.
-<!-- -->
+<!-- DONE -->
 * Each Task should have an option to 'Complete' or 'Delete'.
 <!-- complete button, delete button - client append -->
+<!-- DONE -->
 * When a Task is complete, its visual representation should change on the front end.
 <!-- possible boolean false to true -->
 <!-- data-id, id, class/css -->
  For example, the background of the task container could change from gray to green. 
+ <!-- Whole row turns either red for uncompleted/false or green for completed/true -->
  
  The complete option should be  'checked off'. 
  Each of these are accomplished in CSS, but will need to hook into logic to know whether or not the task is complete.
 <!-- -->
 * Whether or not a Task is complete should also be stored in the database.
-<!-- -->
+<!-- Sends to data base ---  DONE -->
 * Deleting a Task should remove it both from the front end as well as the Database.
+<!-- deletes from data base ---  DONE -->
 
 ### Styling
 
 Use CSS styling to move the aesthetic of the page beyond the vanilla HTML look:
   - background color of the page
+  <!-- light light blue --- DONE -->
   - font family and size
+  <!-- uncompleted task ar italic --- DONE -->
   - text color & or background color of tasks *to show whether or not they have been completed*
+  <!-- both text and color change weather ot not they are completed --- DONE -->
 
 ### Approach
 
@@ -57,7 +63,7 @@ This is so we can re-create your database while testing your app.
 
 ## Stretch Goals
 
-For each of your strech goals, you will be practicing git branching. Please refer to the branching notes for a reminder on commands. Each branch will be merged into main using `--no-ff`. This will allow us to see that you branched your feature when you turn in your code.
+For each of your stretch goals, you will be practicing git branching. Please refer to the branching notes for a reminder on commands. Each branch will be merged into main using `--no-ff`. This will allow us to see that you branched your feature when you turn in your code.
 
 - `feature-styling-bootstrap` 
 
@@ -94,10 +100,3 @@ For each of your strech goals, you will be practicing git branching. Please refe
 <!-- index.html DONE -->
 <!-- server.js DONE -->
 <!-- client.js DONE -->
-<!--  -->
-
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
