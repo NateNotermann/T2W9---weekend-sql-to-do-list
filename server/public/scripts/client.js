@@ -145,15 +145,25 @@ function completeTask (){
     .catch(function (error) {
         console.log('ERROR Deleting Task (CLIENT)', error);
     })
-    
-
-
 }
 
 function uncompleteTask (){
     console.log( 'START un-completeTask (CLIENT)');
+    let taskId = $(this).data('id');
 
+    $.ajax({
+        type: 'PUT',
+        url: `/tasks/${taskId}`,
+    })
+    .then (function (response) {
+        console.log( 'Task UN-Completed! (CLIENT)');
+        getTasks();
+    })
+    .catch (function (error) {
+        console.log( 'ERROR Un-Completing! (CLEINT)');
+    })
 }
+
 
 function deleteTask (){
     console.log(' START deleteTask (CLIENT)' );
