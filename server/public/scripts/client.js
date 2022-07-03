@@ -6,6 +6,11 @@ function onReady() {
     getTasks(); //  NOT set up yet
     $(document).on('click', '#addButton', addTask) // connects
     $(document).on('click', '#clearAllTasksButton', clearAllTasks) // connects
+    $(document).on('click', '.completeButton', completeTask) // connects
+    $(document).on('click', '.deleteButton', deleteTask) // connects
+    $(document).on('click', '.uncompleteButton', uncompleteTask) // connects
+    
+
 };
 
 
@@ -50,6 +55,10 @@ function getTasks() {
 
 }
 
+
+
+
+
 function clearAllTasks() {
     console.log('function to clear all task (client)');
 }
@@ -74,8 +83,8 @@ function renderTask(tasks) {
                 <td>${task.name}</td>
                 <td>${task.description}</td>
                 <td>${task.status}</td>
-                <td><button data-id="${task.id}">Completed</button></td>
-                <td><button data-id="${task.id}">Delete</button></td>
+                <td><button data-id="${task.id}" class="completeButton">Completed</button></td>
+                <td><button data-id="${task.id}" class="deleteButton">Delete</button></td>
                 </tr>
                 `);
                 console.log('task status is FALSE', task);
@@ -86,8 +95,8 @@ function renderTask(tasks) {
                 <td>${task.name}</td>
                 <td>${task.description}</td>
                 <td>${task.status}</td>
-                <td><button data-id="${task.id}">Completed</button></td>
-                <td><button data-id="${task.id}">Delete</button></td>
+                <td><button data-id="${task.id}" class="uncompleteButton">UnComplete</button></td>
+                <td><button data-id="${task.id}" class="deleteButton">Delete</button></td>
             </tr>
         `);
             console.log('task status is TRUE', task);
@@ -96,3 +105,19 @@ function renderTask(tasks) {
     $('input').val('');
     console.log('END renderTask (client)');
 };
+
+
+function completeTask (){
+    console.log(' START completeTask' );
+    let TaskId = $(this).data('id');
+
+}
+
+function uncompleteTask (){
+    console.log( 'START uncompleteTask');
+}
+
+function deleteTask (){
+    console.log(' START deleteTask' );
+}
+
