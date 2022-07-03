@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
         })
 });
 
-// ----- POST ----- ADDTASK FUNCTION --------- // 
+// ----- POST ----- ADD TASK FUNCTION --------- // 
 router.post('/', (req,res) => {
     const newTask = req.body;
     const queryText = `
@@ -47,7 +47,7 @@ router.delete('/:id', (req, res) => {
     })
     .catch((error) =>{
         console.log(` ERROR DELETING Task (ROUTER) ${queryText}: ${error}`);
-        res.sendstatus(500); 
+        res.sendStatus(500); 
     })
 })
 
@@ -66,7 +66,7 @@ router.put('/:id',(req,res) => {
     })
 })
 
-router.put('/:id',(req,res) => {
+router.put('/uncomplete/:id',(req,res) => {
     let taskId = req.params.id;
     console.log(taskId);
     let queryText = 'UPDATE "tasks" SET "status" = FALSE WHERE "id" = $1; ';

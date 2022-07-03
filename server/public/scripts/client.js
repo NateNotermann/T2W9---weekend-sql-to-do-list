@@ -147,22 +147,40 @@ function completeTask (){
     })
 }
 
-function uncompleteTask (){
-    console.log( 'START un-completeTask (CLIENT)');
-    let taskId = $(this).data('id');
 
+function uncompleteTask (){
+    console.log(' START UN-completeTask (CLIENT)' );
+
+    let taskId = $(this).data('id');
     $.ajax({
         type: 'PUT',
-        url: `/tasks/${taskId}`,
+        url: `/tasks/uncomplete/${taskId}`,
     })
-    .then (function (response) {
-        console.log( 'Task UN-Completed! (CLIENT)');
+    .then (function(response) {
+        console.log( 'Task UN-complete! (CLIENT)');
         getTasks();
     })
-    .catch (function (error) {
-        console.log( 'ERROR Un-Completing! (CLEINT)');
+    .catch(function (error) {
+        console.log('ERROR UN-completing Task (CLIENT)', error);
     })
 }
+
+// function uncompleteTask (){
+//     console.log( 'START un-completeTask (CLIENT)');
+//     let taskId = $(this).data('id');
+
+//     $.ajax({
+//         type: 'PUT',
+//         url: `/tasks/${taskId}`,
+//     })
+//     .then (function (response) {
+//         console.log( 'Task UN-Completed! (CLIENT)');
+//         getTasks();
+//     })
+//     .catch (function (error) {
+//         console.log( 'ERROR Un-Completing! (CLEINT)');
+//     })
+// }
 
 
 function deleteTask (){
