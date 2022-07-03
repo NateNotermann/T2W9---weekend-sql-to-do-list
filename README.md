@@ -49,7 +49,7 @@ If you want to delete a task just click the "Delete" button in it's row.
 
 
 
-
+<!-- 
 
 
 # Project Name
@@ -60,4 +60,4 @@ If you want to delete a task just click the "Delete" button in it's row.
 
 Your project description goes here. What problem did you solve? How did you solve it?
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md). -->
