@@ -18,16 +18,16 @@ table, th, td {
 }
 
 
-/* tr:nth-child(odd){
+tr:nth-child(odd){
     background-color: lightcyan;
-} */
+}
 
 table {
     width: 100%;
 }
 
 th {
-    width: 25%;
+    width: 20%;
 }
 
 td {
@@ -35,12 +35,12 @@ td {
 }
 
 
-.false {
+/* .false {
     font-style: italic;
     background-color: lightcoral;
 
-}
+} */
 
-.true {
+/* .true {
     background-color: lightgreen;
-}
+} */

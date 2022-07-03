@@ -62,15 +62,15 @@ function renderTask(tasks) {
         for (let task of tasks) {
             // console.log( 'START renderTask LOOP' );
             let taskStatus = `${task.status}`;
-            console.log( 'task start is:', `${task.status}`);
-            console.log( 'task is:', tasks);
-            console.log( 'taskStatus is:', taskStatus);
+            // console.log( 'task start is:', `${task.status}`);
+            // console.log( 'task is:', tasks);
+            // console.log( 'taskStatus is:', taskStatus);
           
 
             if (  `${taskStatus}` === 'false' ) { // -- if 'false' append this
                 
                 $('#tbody').append(`
-                <tr class="false">
+                <tr class="false" style="background-color: lightcoral">
                 <td>${task.name}</td>
                 <td>${task.description}</td>
                 <td>${task.status}</td>
@@ -82,7 +82,7 @@ function renderTask(tasks) {
         }
         else if ( taskStatus === 'true' ){ // -- if 'true' append this
             $('#tbody').append(`
-            <tr class="true">
+            <tr class="true" style="background-color: lightgreen">
                 <td>${task.name}</td>
                 <td>${task.description}</td>
                 <td>${task.status}</td>
