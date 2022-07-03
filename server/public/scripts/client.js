@@ -131,24 +131,39 @@ function renderTask(tasks) {
 
 
 function completeTask (){
-    console.log(' START completeTask' );
+    console.log(' START completeTask (CLIENT)' );
+
+    let taskId = $(this).data('id');
+    $.ajax({
+        type: 'PUT',
+        url: `/tasks/${taskId}`,
+    })
+    .then (function(response) {
+        console.log( 'Task COMPLETED! (CLIENT)');
+        getTasks();
+    })
+    .catch(function (error) {
+        console.log('ERROR Deleting Task (CLIENT)', error);
+    })
+    
+
 
 }
 
 function uncompleteTask (){
-    console.log( 'START un-completeTask');
+    console.log( 'START un-completeTask (CLIENT)');
 
 }
 
 function deleteTask (){
-    console.log(' START deleteTask' );
+    console.log(' START deleteTask (CLIENT)' );
     let taskId = $(this).data('id');
     $.ajax({
         type: 'DELETE',
         url: `/tasks/${taskId}`,
     })
     .then(function(response){
-    console.log('DELETED Task');
+    console.log('DELETED Task (CLIENT)');
     getTasks();
     })
     .catch(function(error) {

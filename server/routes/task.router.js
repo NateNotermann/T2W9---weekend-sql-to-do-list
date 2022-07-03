@@ -51,7 +51,35 @@ router.delete('/:id', (req, res) => {
     })
 })
 
+router.put('/:id',(req,res) => {
+    let taskId = req.params.id;
+    console.log(taskId);
+    let queryText = 'UPDATE "tasks" SET "status" = TRUE WHERE "id" = $1; ';
 
+    pool.query(queryText, [taskId])
+    .then((response) => {
+        console.log('Task Completed! (CLIENT)');
+        res.send(response.rows)
+    })
+    .catch((error) => {
+        console.log('ERROR Completing (ROUTER)');
+    })
+})
+
+router.put('/:id',(req,res) => {
+    let taskId = req.params.id;
+    console.log(taskId);
+    let queryText = 'UPDATE "tasks" SET "status" = FALSE WHERE "id" = $1; ';
+
+    pool.query(queryText, [taskId])
+    .then((response) => {
+        console.log('Task UN-Completed! (CLIENT)');
+        res.send(response.rows)
+    })
+    .catch((error) => {
+        console.log('ERROR UN-Completing (ROUTER)');
+    })
+})
 
 
 
