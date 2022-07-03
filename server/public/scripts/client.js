@@ -30,8 +30,30 @@ function onReady() {
 
 // -- ADD FUNCTION -- //
 function addTask() {
-    console.log('function to addTask');
-}
+    console.log('START addTask (CLIENT)');
+
+   let newTask = {
+    name: $('#inputTask').val(),
+    description: $('#taskDescription').val(),
+    status: false,
+   };
+
+   console.log( 'newTask is:', newTask );
+
+    $.ajax({
+        url: '/tasks',
+        method: 'POST', 
+        data: newTask
+    })
+    .then (function (response) {
+        console.log('addTask GET response:', response);
+    })
+    .catch(function(response){
+        console.log('ERROR w/ addTask GET response:', response);
+        alert('ERROR w/ addTask GET response')
+    });
+    console.log( 'END of addTask' );
+};
 
 
 // -- BACK-END OR SERVER/ROUT/POOL FUNCTIONS -- //
@@ -109,12 +131,12 @@ function renderTask(tasks) {
 
 function completeTask (){
     console.log(' START completeTask' );
-    let TaskId = $(this).data('id');
 
 }
 
 function uncompleteTask (){
-    console.log( 'START uncompleteTask');
+    console.log( 'START un-completeTask');
+
 }
 
 function deleteTask (){

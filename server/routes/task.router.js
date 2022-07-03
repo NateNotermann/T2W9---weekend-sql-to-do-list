@@ -18,10 +18,14 @@ router.get('/', (req, res) => {
         })
 });
 
-// -- POST -- //   --- don`t need yet
-// router.post('/', (req,res) => {
-//     const 
-// })
+// -- POST -- // 
+router.post('/', (req,res) => {
+    const newTask = req.body;
+    const queryText = `
+    INSERT INTO "tasks" ("name", "description", "status")
+    VALUES ("name", "description", "Status";)
+    ` 
+})
 
 
 
