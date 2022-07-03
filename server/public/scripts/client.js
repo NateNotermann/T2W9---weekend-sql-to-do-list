@@ -142,5 +142,18 @@ function uncompleteTask (){
 
 function deleteTask (){
     console.log(' START deleteTask' );
+    let taskId = $(this).data('id');
+    $.ajax({
+        type: 'DELETE',
+        url: `/tasks/${taskId}`,
+    })
+    .then(function(response){
+    console.log('DELETED Task');
+    getTasks();
+    })
+    .catch(function(error) {
+        console.log('ERROR Deleting (CLIENT)', error);
+        alert('ERROR Deleting (CLIENT)');
+    })
 }
 

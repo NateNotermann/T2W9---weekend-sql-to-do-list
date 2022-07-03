@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();  // call express
 const bodyParser = require('body-parser'); 
 const PORT = process.env.PORT || 5000;// port server will be running on
-const taskRouter = require('./routes/task.router.js'); // --------------error
+const taskRouter = require('./routes/task.router.js'); 
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('server/public'));
@@ -10,7 +10,7 @@ app.use(express.static('server/public'));
     // I believe it should know to find a folder called modules from there
 
 
-app.use('/tasks', taskRouter ); // --------------error
+app.use('/tasks', taskRouter ); 
 
 
 
