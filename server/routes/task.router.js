@@ -1,3 +1,4 @@
+const { query } = require('express');
 const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool.js');
@@ -22,10 +23,17 @@ router.get('/', (req, res) => {
 router.post('/', (req,res) => {
     const newTask = req.body;
     const queryText = `
-    INSERT INTO "tasks" ("name", "description", "status")
-    VALUES ("name", "description", "Status";)
-    ` 
-})
+        INSERT INTO tasks ( name, description, status)
+        VALUES ($1, $2, $3 );
+        `;
+    pool.query(queryText, [newTask.name, newTask.description, newTask.status])
+    .then((result)=>{
+        res.sendStatus(201);
+    }).catch((error)=>{
+        console.log( 'ERROR w/ router.post to db', error );
+        res.sendStatus(500)
+    })
+});
 
 
 

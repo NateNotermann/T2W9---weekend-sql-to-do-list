@@ -28,7 +28,7 @@ function onReady() {
 
 
 
-// -- ADD FUNCTION -- //
+// -- ADD TASK - POST FUNCTION -- //
 function addTask() {
     console.log('START addTask (CLIENT)');
 
@@ -42,11 +42,12 @@ function addTask() {
 
     $.ajax({
         url: '/tasks',
-        method: 'POST', 
+        method: 'POST', // ------------- POST -----------//
         data: newTask
     })
     .then (function (response) {
         console.log('addTask GET response:', response);
+        getTasks();
     })
     .catch(function(response){
         console.log('ERROR w/ addTask GET response:', response);
@@ -109,7 +110,7 @@ function renderTask(tasks) {
                 <td><button data-id="${task.id}" class="deleteButton">Delete</button></td>
                 </tr>
                 `);
-                console.log('task status is FALSE', task);
+                // console.log('task status is FALSE', task);
         }
         else if ( taskStatus === 'true' ){ // -- if 'true' append this
             $('#tbody').append(`
@@ -121,7 +122,7 @@ function renderTask(tasks) {
                 <td><button data-id="${task.id}" class="deleteButton">Delete</button></td>
             </tr>
         `);
-            console.log('task status is TRUE', task);
+            // console.log('task status is TRUE', task);
         }
         };
     $('input').val('');
